@@ -1,0 +1,175 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Sorpresa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #d500f9, #c51162); /* Gradiente de magenta a rosa oscuro */
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 650px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 2;
+        }
+        h1 {
+            color: #d500f9; /* Magenta */
+            font-size: 50px;
+            font-family: 'Cursive', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            background: url('https://www.w3schools.com/w3images/heart.png') no-repeat right center;
+            background-size: 25px;
+            padding-right: 50px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            color: #ff1744; /* Rojo para los párrafos */
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .signature {
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 22px;
+            color: #d500f9;
+            text-align: right;
+            letter-spacing: 1px;
+        }
+        .heart {
+            font-size: 70px;
+            color: #d500f9; /* Magenta */
+            text-align: center;
+            margin-top: 30px;
+        }
+        .music-btn {
+            background-color: #d500f9;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .music-btn:hover {
+            background-color: #c51162;
+        }
+        .decorative-heart {
+            font-size: 100px;
+            color: #d500f9;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            opacity: 0.1;
+        }
+        .small-heart {
+            font-size: 45px;
+            color: #d32f2f; /* Rojo oscuro */
+            position: absolute;
+            opacity: 0.4;
+            animation: float 4s infinite;
+        }
+        /* Animación de los corazones flotando */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        /* Distribución aleatoria de los corazones por la pantalla */
+        .heart1 { top: 30px; left: 10px; }
+        .heart2 { top: 120px; right: 50px; }
+        .heart3 { top: 250px; left: 100px; }
+        .heart4 { top: 400px; right: 20px; }
+        .heart5 { top: 80px; left: 150px; }
+        .heart6 { top: 300px; left: 50px; }
+        .heart7 { top: 100px; right: 150px; }
+        .heart8 { top: 350px; left: 200px; }
+        .heart9 { top: 200px; left: 300px; }
+        .heart10 { top: 500px; left: 120px; }
+        .heart11 { top: 600px; left: 30px; }
+        .heart12 { top: 450px; right: 80px; }
+        .heart13 { top: 700px; left: 200px; }
+        .heart14 { top: 600px; right: 150px; }
+        .heart15 { top: 50px; right: 120px; }
+        .heart16 { top: 250px; right: 180px; }
+        .heart17 { top: 500px; left: 250px; }
+        .heart18 { top: 150px; left: 350px; }
+        .heart19 { top: 100px; left: 450px; }
+        .heart20 { top: 700px; right: 30px; }
+    </style>
+</head>
+<body>
+    <!-- Reproductor de música que se ejecuta automáticamente -->
+    <audio autoplay loop>
+        <source src="file:///C:/Users/LENOVO/Documents/html/musica/musica.mp3" type="audio/mp3">
+        Tu navegador no soporta este formato de audio.
+    </audio>
+    
+
+    <div class="container">
+        <h1>MI QUERIDA NEGRITA PELEONA</h1>
+        <p>
+            Desde que entraste en mi vida, todo ha cambiado. Tus ojos, tu sonrisa, tu forma de ser, me hacen sentir una felicidad indescriptible. 
+            Hoy quiero sorprenderte con estas palabras, que nacen del fondo de mi corazón.
+        </p>
+        <p>
+            No sé si alguna vez podré expresarte todo lo que significas para mí, pero cada momento contigo es un regalo que atesoro más que nada. 
+            Tu amor me da fuerzas para ser mejor persona cada día.
+        </p>
+        <p>
+            Gracias por ser tú, por compartir tu vida conmigo, por darme tu apoyo y por hacer que cada día sea especial.
+        </p>
+        <p class="heart">💖</p>
+        <p class="signature">
+            Siempre tuyo,<br>
+            <span>Antho</span>
+        </p>
+        <button class="music-btn" onclick="playMusic()">Reproducir Música</button>
+    </div>
+
+    <!-- Corazones pequeños flotando en la pantalla -->
+    <div class="small-heart heart1">❤️</div>
+    <div class="small-heart heart2">❤️</div>
+    <div class="small-heart heart3">❤️</div>
+    <div class="small-heart heart4">❤️</div>
+    <div class="small-heart heart5">❤️</div>
+    <div class="small-heart heart6">❤️</div>
+    <div class="small-heart heart7">❤️</div>
+    <div class="small-heart heart8">❤️</div>
+    <div class="small-heart heart9">❤️</div>
+    <div class="small-heart heart10">❤️</div>
+    <div class="small-heart heart11">❤️</div>
+    <div class="small-heart heart12">❤️</div>
+    <div class="small-heart heart13">❤️</div>
+    <div class="small-heart heart14">❤️</div>
+    <div class="small-heart heart15">❤️</div>
+    <div class="small-heart heart16">❤️</div>
+    <div class="small-heart heart17">❤️</div>
+    <div class="small-heart heart18">❤️</div>
+    <div class="small-heart heart19">❤️</div>
+    <div class="small-heart heart20">❤️</div>
+
+    <!-- Corazón decorativo -->
+    <div class="decorative-heart">❤️</div>
+
+    <script>
+        function playMusic() {
+            var audio = document.querySelector('audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
